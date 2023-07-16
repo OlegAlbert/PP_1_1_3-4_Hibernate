@@ -6,11 +6,10 @@ import jm.task.core.jdbc.util.Util;
 
 public class Main {
     public static void main(String[] args) {
-        Util.getConnection();
+        Util.getSessionFactory();
         UserService userService = new UserServiceImpl();
 
         userService.createUsersTable();
-
         userService.saveUser("Oleg", "Albert", (byte) 22);
         userService.saveUser("Ivan", "Ivanov", (byte) 25);
         userService.saveUser("Petya", "Petrov", (byte) 31);
